@@ -1,0 +1,68 @@
+# list []
+# dictionary {}
+
+# if-else
+# for and while
+
+# functions
+# functions with parameters
+# functions with return
+import time
+def timer_1(get):
+    timer = get
+    flag = True
+    while flag:
+        for i in range(timer,0,-1):
+            print(i)
+            timer -= 1
+            time.sleep(1)
+        if timer == 0:
+            flag = False
+            break
+    
+# timer_1(int(input("Enter time: ")))
+
+
+# working with files
+# read and write files
+with open('C:/Users/R2D2/Documents/Тамила_2/study/exam/text.txt', mode= 'w') as data:
+    message = 'it is message for use data'
+    data.write(message)
+
+with open("C:/Users/R2D2/Documents/Тамила_2/study/exam/text.txt") as file:
+    print(file.read())
+# class 
+# objects of class
+# try-except
+
+import pandas as pd
+class Fruts_param:
+    def __init__(self):
+        df = pd.DataFrame([
+            'name','color','form','taste'], 
+            ['-name-', '-color', '-form-', '-sweet|sour-']    )
+        
+        with open('C:/Users/R2D2/Documents/Тамила_2/study/exam/params.csv', mode='a') as data:
+                data.write(df.to_csv(index=False, header=False, sep='|'))
+        try:
+            with open("C:/Users/R2D2/Documents/Тамила_2/study/exam/params.csv") as file:
+                print("Содержимое файла:")
+                print(file.read())
+            print("DataFrame:")
+            print(df)
+        except FileNotFoundError:
+            with open('C:/Users/R2D2/Documents/Тамила_2/study/exam/params.csv', mode='a') as data:
+                data.write(df.to_csv(index=False, header=False, sep='|'))
+            
+        def appending(self):
+            pass
+
+Fruts_param()
+
+
+        
+
+# class inheritance (genetic)
+
+# database - json and pandas
+# apis
