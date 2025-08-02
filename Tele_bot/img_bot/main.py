@@ -5,10 +5,10 @@ from PIL import Image
 import pytesseract
 
 # Укажи путь к tesseract.exe
-pytesseract.pytesseract.tesseract_cmd = r"C:/Users/R2D2/AppData/Local/Programs/Tesseract-OCR/tesseract.exe" 
+pytesseract.pytesseract.tesseract_cmd = r"PATH-TO-TESSERACT" 
 
 # Вставь свой Telegram токен
-BOT_TOKEN = '8317009553:AAFtAPWH-4VXPyoDDnY_V-21xTXGTbM4Xmc'
+BOT_TOKEN = 'YOUR-API-TOKEN'
 
 async def handle_photo(update: Update, context: ContextTypes.DEFAULT_TYPE):
     photo_file = await update.message.photo[-1].get_file()
@@ -31,3 +31,4 @@ if __name__ == '__main__':
     app.add_handler(MessageHandler(filters.PHOTO, handle_photo))
     print("🤖 Бот запущен...")
     app.run_polling()
+
