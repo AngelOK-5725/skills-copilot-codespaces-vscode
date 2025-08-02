@@ -7,7 +7,7 @@ from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 from bs4 import BeautifulSoup
 import re
 
-TOKEN = "7713147749:AAEf4j9C6gqKHgtaPm8_pJSG96JwCy7IK2g"  # Вставь сюда токен
+TOKEN = "YOUR-API-TOKEN-FROM-BOTFATHER"  # Вставь сюда токен
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
 
@@ -64,3 +64,4 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
